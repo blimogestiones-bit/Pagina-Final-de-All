@@ -107,7 +107,7 @@ export function ProductCarousel({
                     <h3 className="font-bold text-lg text-slate-900 mb-2">{product.name}</h3>
                     <p className="text-sm text-slate-600 mb-4 flex-grow">{product.description}</p>
                     <a
-                      href="/productos"
+                      href={`/productos?producto=${product.id}`}
                       className="inline-block px-4 py-2 bg-brand-green text-white rounded font-semibold hover:bg-brand-green-dark transition-colors duration-300 text-center"
                     >
                       Ver Catalogo

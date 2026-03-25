@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useSearchParams } from "next/navigation"
 import { AnimatedSection } from "@/components/animated-section"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -129,7 +130,19 @@ const productsData = [
 ]
 
 export default function ProductosPage() {
+  const searchParams = useSearchParams()
   const [selectedProduct, setSelectedProduct] = useState(productsData[0])
+
+  // Set selected product based on URL parameter
+  useEffect(() => {
+    const productoParam = searchParams.get("producto")
+    if (productoParam) {
+      const found = productsData.find((p) => p.id === productoParam)
+      if (found) {
+        setSelectedProduct(found)
+      }
+    }
+  }, [searchParams])
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -173,16 +186,16 @@ export default function ProductosPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-16 overflow-hidden min-h-[30vh] flex items-center">
+      <section className="relative py-12 overflow-hidden flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-dark via-blue-900 to-slate-900" />
         <div className="absolute top-10 left-20 w-32 h-32 bg-brand-green/15 rounded-full blur-3xl animate-pulse"></div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <AnimatedSection animation="fade-up" delay={100}>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-2xl">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-2xl">
               Catalogo de Productos
             </h1>
-            <p className="text-xl text-white/90 drop-shadow-lg">
+            <p className="text-lg text-white/90 drop-shadow-lg">
               Soluciones especializadas para la industria
             </p>
           </AnimatedSection>
@@ -190,9 +203,9 @@ export default function ProductosPage() {
       </section>
 
       {/* Catalog with Sidebar */}
-      <section className="py-12">
+      <section className="py-8">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-8">
+          <div className="flex flex-col lg:flex-row gap-6">
 
             {/* Left Sidebar - Product List */}
             <div className="lg:w-1/4">
@@ -223,43 +236,48 @@ export default function ProductosPage() {
             <div className="lg:w-3/4">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden">
 
-                {/* Product Image */}
-                <div className="relative h-72 md:h-96 bg-slate-100">
-                  <img
-                    key={selectedProduct.id}
-                    src={selectedProduct.image}
-                    alt={selectedProduct.name}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none"
-                    }}
-                  />
-                </div>
-
-                {/* Product Info */}
-                <div className="p-8">
-
-                  {/* Title */}
-                  <h2 className="text-3xl font-bold text-brand-blue-dark mb-8">
-                    {selectedProduct.name}
-                  </h2>
-
-                  {/* Description */}
-                  <div className="mb-8">
-                    <h3 className="text-sm font-bold text-brand-green uppercase tracking-widest mb-3 pb-2 border-b border-brand-green/30">
-                      Descripcion
-                    </h3>
-                    <p className="text-text-secondary leading-relaxed text-base">
-                      {selectedProduct.description}
-                    </p>
+                {/* Product Header with Image and Title side by side */}
+                <div className="flex flex-col md:flex-row">
+                  {/* Product Image - smaller and contained */}
+                  <div className="md:w-2/5 p-6">
+                    <div className="relative aspect-square bg-slate-100 rounded-lg overflow-hidden">
+                      <img
+                        key={selectedProduct.id}
+                        src={selectedProduct.image}
+                        alt={selectedProduct.name}
+                        className="w-full h-full object-contain p-4"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none"
+                        }}
+                      />
+                    </div>
                   </div>
 
+                  {/* Title and Description */}
+                  <div className="md:w-3/5 p-6 flex flex-col justify-center">
+                    <h2 className="text-2xl md:text-3xl font-bold text-brand-blue-dark mb-4">
+                      {selectedProduct.name}
+                    </h2>
+                    <div>
+                      <h3 className="text-xs font-bold text-brand-green uppercase tracking-widest mb-2">
+                        Descripcion
+                      </h3>
+                      <p className="text-text-secondary leading-relaxed text-sm">
+                        {selectedProduct.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Features and Video Section */}
+                <div className="p-6 pt-0 border-t border-slate-100">
+
                   {/* Features - Clearly separated */}
-                  <div className="mb-8">
-                    <h3 className="text-sm font-bold text-brand-green uppercase tracking-widest mb-4 pb-2 border-b border-brand-green/30">
+                  <div className="mb-6">
+                    <h3 className="text-xs font-bold text-brand-green uppercase tracking-widest mb-4 pt-6">
                       Caracteristicas Tecnicas
                     </h3>
-                    <div className="grid md:grid-cols-2 gap-3">
+                    <div className="grid md:grid-cols-2 gap-2">
                       {selectedProduct.features.map((feature, idx) => (
                         <div
                           key={idx}
@@ -274,11 +292,11 @@ export default function ProductosPage() {
 
                   {/* Video section - only for variador */}
                   {selectedProduct.video && (
-                    <div className="mb-8">
-                      <h3 className="text-sm font-bold text-brand-green uppercase tracking-widest mb-4 pb-2 border-b border-brand-green/30">
+                    <div className="mb-6">
+                      <h3 className="text-xs font-bold text-brand-green uppercase tracking-widest mb-4">
                         Video Demostrativo
                       </h3>
-                      <div className="bg-slate-900 rounded-xl overflow-hidden shadow-lg">
+                      <div className="bg-slate-900 rounded-xl overflow-hidden shadow-lg max-w-2xl">
                         <video
                           controls
                           className="w-full aspect-video"
@@ -292,9 +310,9 @@ export default function ProductosPage() {
                   )}
 
                   {/* CTA */}
-                  <div className="pt-6 border-t border-slate-200">
+                  <div className="pt-4 border-t border-slate-200">
                     <Link href="/#contacto">
-                      <Button className="px-8 py-4 bg-brand-green text-white hover:bg-brand-green-dark hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold text-base">
+                      <Button className="px-6 py-3 bg-brand-green text-white hover:bg-brand-green-dark hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
                         Solicitar Cotizacion
                       </Button>
                     </Link>
