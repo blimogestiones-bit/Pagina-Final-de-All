@@ -228,6 +228,111 @@ export default function AllSuppliesWebsite() {
         </div>
       </section>
 
+      {/* Products Section */}
+      <section id="productos" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <AnimatedSection animation="fade-up" delay={50}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Nuestros Productos</h2>
+              <div className="w-24 h-1 bg-brand-green-dark mx-auto"></div>
+              <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
+                Disponemos de una amplia gama de productos especializados de alta calidad para la industria
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Válvulas */}
+            <AnimatedSection animation="slide-left" delay={150} triggerOnce={false}>
+              <div className="group">
+                <TouchOptimizedCard borderColor="border-orange-500">
+                  <CardHeader className="text-center pb-4">
+                    <div className="mx-auto mb-4 p-4 bg-orange-100 rounded-full w-fit shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <svg className="h-8 w-8 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+                      </svg>
+                    </div>
+                    <CardTitle className="text-xl font-bold text-text-primary">Válvulas</CardTitle>
+                    <CardDescription className="text-text-secondary">
+                      Sistemas de válvulas de alta especificación y bombeo avanzado
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center space-y-4">
+                    <ul className="text-left text-sm text-text-secondary space-y-2">
+                      <li className="flex items-center space-x-2">
+                        <span className="text-orange-600">✓</span>
+                        <span>Válvulas de control industrial</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <span className="text-orange-600">✓</span>
+                        <span>Sistemas de bombeo especializado</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <span className="text-orange-600">✓</span>
+                        <span>Componentes de alta presión</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <span className="text-orange-600">✓</span>
+                        <span>Certificación internacional</span>
+                      </li>
+                    </ul>
+                    <ScrollToTopLink href="/app/servicios/energia-tecnologia">
+                      <Button className="w-full bg-orange-600 text-white hover:bg-orange-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
+                        Información Detallada
+                      </Button>
+                    </ScrollToTopLink>
+                  </CardContent>
+                </TouchOptimizedCard>
+              </div>
+            </AnimatedSection>
+
+            {/* Equipos de Seguridad */}
+            <AnimatedSection animation="slide-right" delay={250} triggerOnce={false}>
+              <div className="group">
+                <TouchOptimizedCard borderColor="border-blue-500">
+                  <CardHeader className="text-center pb-4">
+                    <div className="mx-auto mb-4 p-4 bg-blue-100 rounded-full w-fit shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <svg className="h-8 w-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z" />
+                      </svg>
+                    </div>
+                    <CardTitle className="text-xl font-bold text-text-primary">Equipos de Seguridad</CardTitle>
+                    <CardDescription className="text-text-secondary">
+                      Soluciones integrales de protección industrial y sistemas de control
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center space-y-4">
+                    <ul className="text-left text-sm text-text-secondary space-y-2">
+                      <li className="flex items-center space-x-2">
+                        <span className="text-blue-600">✓</span>
+                        <span>Sistemas de monitoreo avanzado</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <span className="text-blue-600">✓</span>
+                        <span>Equipos de protección certificados</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <span className="text-blue-600">✓</span>
+                        <span>Control remoto y automatización</span>
+                      </li>
+                      <li className="flex items-center space-x-2">
+                        <span className="text-blue-600">✓</span>
+                        <span>Cumplimiento de normas internacionales</span>
+                      </li>
+                    </ul>
+                    <ScrollToTopLink href="/app/servicios/energia-tecnologia">
+                      <Button className="w-full bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
+                        Información Detallada
+                      </Button>
+                    </ScrollToTopLink>
+                  </CardContent>
+                </TouchOptimizedCard>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Metrics Section */}
       <section id="nosotros">
         <MetricsSection />
