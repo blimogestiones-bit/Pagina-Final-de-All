@@ -2,7 +2,17 @@ import subprocess
 import sys
 import os
 
-os.chdir('/vercel/share/v0-project')
+# Use absolute path to project
+project_path = '/vercel/share/v0-project'
+os.chdir(project_path)
+print(f'[v0] Changed to project directory: {os.getcwd()}')
+
+# Verify git repo exists
+if not os.path.exists('.git'):
+    print('[v0] ERROR: .git directory not found')
+    sys.exit(1)
+
+print('[v0] Git repository found')
 
 try:
     # Configure git
