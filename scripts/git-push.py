@@ -1,0 +1,46 @@
+import subprocess
+import sys
+import os
+
+os.chdir('/vercel/share/v0-project')
+
+try:
+    # Configure git
+    subprocess.run(['git', 'config', 'user.email', 'v0@vercel.com'], check=True)
+    subprocess.run(['git', 'config', 'user.name', 'v0 Assistant'], check=True)
+    
+    # Add all changes
+    subprocess.run(['git', 'add', '.'], check=True)
+    
+    # Commit changes
+    result = subprocess.run(
+        ['git', 'commit', '-m', 'Update: Rebuild Products catalog with 3-column grid, professional descriptions, and quote buttons'],
+        capture_output=True,
+        text=True
+    )
+    
+    if result.returncode == 0:
+        print('[v0] Commit successful')
+    elif 'nothing to commit' in result.stdout or 'nothing to commit' in result.stderr:
+        print('[v0] No changes to commit')
+    else:
+        print(f'[v0] Commit output: {result.stdout}')
+        print(f'[v0] Commit errors: {result.stderr}')
+    
+    # Push to main
+    push_result = subprocess.run(['git', 'push', 'origin', 'main'], capture_output=True, text=True)
+    
+    if push_result.returncode == 0:
+        print('[v0] Push to main branch successful!')
+        print('[v0] Changes deployed to GitHub and Vercel')
+    else:
+        print(f'[v0] Push output: {push_result.stdout}')
+        print(f'[v0] Push errors: {push_result.stderr}')
+        sys.exit(1)
+
+except subprocess.CalledProcessError as e:
+    print(f'[v0] Git command failed: {e}')
+    sys.exit(1)
+except Exception as e:
+    print(f'[v0] Error: {str(e)}')
+    sys.exit(1)
