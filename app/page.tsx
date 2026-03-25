@@ -80,59 +80,59 @@ export default function AllSuppliesWebsite() {
   const productsCarouselData = [
     {
       id: "valvulas",
-      name: "Válvulas",
-      description: "Control industrial de alta presión para petróleo y gas",
+      name: "Valvulas",
+      description: "Sistemas de control industrial de alta presion y especificacion. Disponibles globalmente.",
       image: "/products/valvulas.jpg",
-      href: "/productos#valvulas",
+      href: "/productos",
     },
     {
       id: "taladros",
-      name: "Taladros",
-      description: "Equipos de perforación 700HP-3000HP desde USA",
+      name: "Taladros de Perforacion",
+      description: "Equipos de perforacion profesionales desde 700HP hasta 3000HP. Suministro desde USA.",
       image: "/products/taladros.jpg",
-      href: "/productos#taladros",
+      href: "/productos",
     },
     {
       id: "tornilleria",
-      name: "Tornillería",
-      description: "Componentes certificados ASTM para industria",
+      name: "Tornilleria Industrial",
+      description: "Componentes de fijacion certificados ASTM. Multiples grados de aleacion disponibles.",
       image: "/products/tornilleria.jpg",
-      href: "/productos#tornilleria",
+      href: "/productos",
     },
     {
       id: "herramientas",
-      name: "Herramientas",
-      description: "Equipos profesionales de marcas premium",
+      name: "Herramientas Profesionales",
+      description: "Equipos de marcas premium: DeWalt, Nikato, Stanley. Venta y renta disponible.",
       image: "/products/herramientas.jpg",
-      href: "/productos#herramientas",
+      href: "/productos",
     },
     {
       id: "revestidores",
-      name: "Revestidores",
-      description: "Tubería de acero para pozos profundos",
+      name: "Revestidores y Tuberias",
+      description: "Tuberia de acero de alta resistencia. Diametros de 4 1/2\" a 13 3/8\" disponibles.",
       image: "/products/revestidores.jpg",
-      href: "/productos#revestidores",
+      href: "/productos",
     },
     {
       id: "wellcomm",
-      name: "Sensor Wellcomm",
-      description: "Monitoreo inteligente en tiempo real",
+      name: "Sensor WellComm",
+      description: "Sistema de monitoreo inteligente en tiempo real. Transmision inalambrica y alertas.",
       image: "/products/sensor-wellcomm.jpg",
-      href: "/productos#wellcomm",
+      href: "/productos",
     },
     {
       id: "hmi",
       name: "HMI DataLogger",
-      description: "Interface con registro automático de datos",
+      description: "Interface profesional con registro automatico de datos y acceso remoto seguro.",
       image: "/products/hmi-datalogger.jpg",
-      href: "/productos#hmi",
+      href: "/productos",
     },
     {
       id: "variador",
-      name: "Variador",
-      description: "Control de frecuencia para optimización",
+      name: "Variadores de Frecuencia",
+      description: "Control de velocidad de alto rendimiento. Eficiencia energetica optimizada.",
       image: "/products/variador.jpg",
-      href: "/productos#variador",
+      href: "/productos",
     },
   ]
 
@@ -214,29 +214,12 @@ export default function AllSuppliesWebsite() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg font-light">
-                Empresa multinacional especializada en soluciones para la industria de petróleo y gas a través de tres divisiones clave
+              <p className="text-xl md:text-2xl text-white mb-10 leading-relaxed drop-shadow-lg font-light max-w-4xl mx-auto">
+                Empresa multinacional especializada en brindar soluciones estratégicas integrales a través de tres divisiones clave: <span className="font-semibold">Energía, tecnología y seguridad</span>, <span className="font-semibold">Servicios de Procura</span> y <span className="font-semibold">Gestión Financiera Internacional</span>.
               </p>
             </AnimatedSection>
 
-            <AnimatedSection animation="scale-up" delay={300}>
-              <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10">
-                <div className="bg-white/10 backdrop-blur-md p-4 rounded-lg border border-brand-green/30 hover:border-brand-green/60 transition-all duration-300">
-                  <p className="text-white font-semibold">Energía, Tecnología</p>
-                  <p className="text-white/80 text-sm">y Seguridad</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md p-4 rounded-lg border border-brand-green/30 hover:border-brand-green/60 transition-all duration-300">
-                  <p className="text-white font-semibold">Procura</p>
-                  <p className="text-white/80 text-sm">Internacional</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md p-4 rounded-lg border border-brand-green/30 hover:border-brand-green/60 transition-all duration-300">
-                  <p className="text-white font-semibold">Gestión</p>
-                  <p className="text-white/80 text-sm">Financiera</p>
-                </div>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection animation="fade-up" delay={400}>
+            <AnimatedSection animation="fade-up" delay={300}>
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                 <button
                   onClick={() => scrollToSection("productos")}
@@ -271,7 +254,7 @@ export default function AllSuppliesWebsite() {
               <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Nuestros Productos</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-brand-green to-brand-blue mx-auto"></div>
               <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
-                Catálogo completo de soluciones especializadas para la industria de petróleo y gas
+                Catalogo completo de soluciones especializadas para la industria
               </p>
             </div>
           </AnimatedSection>
@@ -287,8 +270,43 @@ export default function AllSuppliesWebsite() {
         </div>
       </section>
 
+      {/* Variadores de Frecuencia Video Section */}
+      <section className="py-20 bg-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <AnimatedSection animation="fade-up" delay={50}>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Variadores de Frecuencia en Accion</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-green to-brand-blue mx-auto"></div>
+              <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
+                Conoce nuestros variadores de frecuencia de alto rendimiento para control de velocidad en sistemas industriales
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection animation="scale-up" delay={150}>
+            <div className="max-w-4xl mx-auto">
+              <div className="relative bg-slate-900 rounded-xl overflow-hidden shadow-2xl">
+                <video
+                  controls
+                  className="w-full aspect-video"
+                  poster="/products/variador.jpg"
+                >
+                  <source src="/videos/variador.mp4" type="video/mp4" />
+                  Tu navegador no soporta la reproduccion de videos.
+                </video>
+              </div>
+              <div className="mt-6 text-center">
+                <p className="text-text-secondary">
+                  Eficiencia energetica optimizada, reduccion de costos operacionales y proteccion de equipos integrada.
+                </p>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <section id="servicios" className="py-20 bg-white overflow-hidden">
+      <section id="servicios" className="py-20 bg-slate-50 overflow-hidden">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up" delay={50}>
             <div className="text-center mb-16">
@@ -337,279 +355,6 @@ export default function AllSuppliesWebsite() {
         </div>
       </section>
 
-      {/* Products Section */}
-      <section id="productos" className="py-20 bg-white overflow-hidden">
-        <div className="container mx-auto px-4">
-          <AnimatedSection animation="fade-up" delay={50}>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Nuestros Productos</h2>
-              <div className="w-24 h-1 bg-brand-green-dark mx-auto"></div>
-              <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
-                Disponemos de una amplia gama de productos especializados de alta calidad para la industria
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {/* Válvulas */}
-            <AnimatedSection animation="fade-up" delay={100} triggerOnce={false}>
-              <div className="group h-full">
-                <TouchOptimizedCard borderColor="border-orange-500">
-                  <div className="relative w-full h-56 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
-                    <img 
-                      src="/products/valvulas.jpg" 
-                      alt="Válvulas" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        if (e.currentTarget.parentElement) {
-                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-orange-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
-                        }
-                      }}
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-xl font-bold text-text-primary">Válvulas</CardTitle>
-                    <CardDescription className="text-text-secondary mt-2">
-                      Sistemas de válvulas de control industrial de alta especificación para petróleo y gas. Disponibles en todo el mundo con distribución desde USA. Bombeo avanzado y componentes de alta presión para aplicaciones críticas de producción.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <Button className="w-full bg-orange-600 text-white hover:bg-orange-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
-                      Solicitar Cotización
-                    </Button>
-                  </CardContent>
-                </TouchOptimizedCard>
-              </div>
-            </AnimatedSection>
-
-            {/* Taladros */}
-            <AnimatedSection animation="fade-up" delay={150} triggerOnce={false}>
-              <div className="group h-full">
-                <TouchOptimizedCard borderColor="border-red-500">
-                  <div className="relative w-full h-56 bg-gradient-to-br from-red-50 to-red-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
-                    <img 
-                      src="/products/taladros.jpg" 
-                      alt="Taladros" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        if (e.currentTarget.parentElement) {
-                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
-                        }
-                      }}
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-xl font-bold text-text-primary">Taladros</CardTitle>
-                    <CardDescription className="text-text-secondary mt-2">
-                      Equipos de perforación profesionales y herramientas especializadas para operaciones de pozos en petróleo y gas. Rigs de perforación con capacidades desde 700 HP hasta 3000 HP. Tecnología de última generación con suministro directo desde USA.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <Button className="w-full bg-red-600 text-white hover:bg-red-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
-                      Solicitar Cotización
-                    </Button>
-                  </CardContent>
-                </TouchOptimizedCard>
-              </div>
-            </AnimatedSection>
-
-            {/* Tornillería */}
-            <AnimatedSection animation="fade-up" delay={200} triggerOnce={false}>
-              <div className="group h-full">
-                <TouchOptimizedCard borderColor="border-yellow-500">
-                  <div className="relative w-full h-56 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
-                    <img 
-                      src="/products/tornilleria.jpg" 
-                      alt="Tornillería" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        if (e.currentTarget.parentElement) {
-                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-yellow-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
-                        }
-                      }}
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-xl font-bold text-text-primary">Tornillería</CardTitle>
-                    <CardDescription className="text-text-secondary mt-2">
-                      Componentes de fijación industrial certificados ASTM para petróleo y gas. Tornillería de precisión, espárragos para altas temperaturas, barras roscadas y accesorios especializados. Disponible en stock y fabricación especial con múltiples grados de aleación.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <Button className="w-full bg-yellow-600 text-white hover:bg-yellow-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
-                      Solicitar Cotización
-                    </Button>
-                  </CardContent>
-                </TouchOptimizedCard>
-              </div>
-            </AnimatedSection>
-
-            {/* Herramientas */}
-            <AnimatedSection animation="fade-up" delay={250} triggerOnce={false}>
-              <div className="group h-full">
-                <TouchOptimizedCard borderColor="border-purple-500">
-                  <div className="relative w-full h-56 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
-                    <img 
-                      src="/products/herramientas.jpg" 
-                      alt="Herramientas" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        if (e.currentTarget.parentElement) {
-                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
-                        }
-                      }}
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-xl font-bold text-text-primary">Herramientas</CardTitle>
-                    <CardDescription className="text-text-secondary mt-2">
-                      Herramientas de precisión profesionales de marcas premium (DeWalt, Nikato, Black+Decker, Stanley) para mantenimiento y operaciones de equipos industriales. Herramientas eléctricas y manuales de durabilidad garantizada para ambientes exigentes de petróleo y gas.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <Button className="w-full bg-purple-600 text-white hover:bg-purple-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
-                      Solicitar Cotización
-                    </Button>
-                  </CardContent>
-                </TouchOptimizedCard>
-              </div>
-            </AnimatedSection>
-
-            {/* Revestidores */}
-            <AnimatedSection animation="fade-up" delay={300} triggerOnce={false}>
-              <div className="group h-full">
-                <TouchOptimizedCard borderColor="border-pink-500">
-                  <div className="relative w-full h-56 bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
-                    <img 
-                      src="/products/revestidores.jpg" 
-                      alt="Revestidores" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        if (e.currentTarget.parentElement) {
-                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-pink-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
-                        }
-                      }}
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-xl font-bold text-text-primary">Revestidores</CardTitle>
-                    <CardDescription className="text-text-secondary mt-2">
-                      Tuberías de revestimiento de acero de alta resistencia para pozos profundos en petróleo y gas. Disponibles múltiples dimensiones de diámetros externos (4 1/2" a 13 3/8") y espesores de pared. Tubería de producción y cabillas especializadas con certificación internacional.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <Button className="w-full bg-pink-600 text-white hover:bg-pink-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
-                      Solicitar Cotización
-                    </Button>
-                  </CardContent>
-                </TouchOptimizedCard>
-              </div>
-            </AnimatedSection>
-
-            {/* Sensor Wellcomm */}
-            <AnimatedSection animation="fade-up" delay={350} triggerOnce={false}>
-              <div className="group h-full">
-                <TouchOptimizedCard borderColor="border-cyan-500">
-                  <div className="relative w-full h-56 bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
-                    <img 
-                      src="/products/sensor-wellcomm.jpg" 
-                      alt="Sensor Wellcomm" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        if (e.currentTarget.parentElement) {
-                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-cyan-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
-                        }
-                      }}
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-xl font-bold text-text-primary">Sensor Wellcomm</CardTitle>
-                    <CardDescription className="text-text-secondary mt-2">
-                      Sistema WellComm de monitoreo inteligente en tiempo real para pozos de petróleo y gas. Transmisión de datos inalámbrica remota, análisis avanzado de parámetros operacionales, sensores de presión y temperatura especializados para ambientes críticos.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <Button className="w-full bg-cyan-600 text-white hover:bg-cyan-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
-                      Solicitar Cotización
-                    </Button>
-                  </CardContent>
-                </TouchOptimizedCard>
-              </div>
-            </AnimatedSection>
-
-            {/* HMI DataLogger */}
-            <AnimatedSection animation="fade-up" delay={400} triggerOnce={false}>
-              <div className="group h-full">
-                <TouchOptimizedCard borderColor="border-indigo-500">
-                  <div className="relative w-full h-56 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
-                    <img 
-                      src="/products/hmi-datalogger.jpg" 
-                      alt="HMI DataLogger" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        if (e.currentTarget.parentElement) {
-                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-indigo-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
-                        }
-                      }}
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-xl font-bold text-text-primary">HMI DataLogger</CardTitle>
-                    <CardDescription className="text-text-secondary mt-2">
-                      Interface HMI con registro automático de datos (DataLogger) para sistemas de petróleo y gas. Visualización en tiempo real de parámetros operacionales, almacenamiento de datos históricos y control remoto de equipos industriales críticos.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <Button className="w-full bg-indigo-600 text-white hover:bg-indigo-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
-                      Solicitar Cotización
-                    </Button>
-                  </CardContent>
-                </TouchOptimizedCard>
-              </div>
-            </AnimatedSection>
-
-            {/* Variador */}
-            <AnimatedSection animation="fade-up" delay={450} triggerOnce={false}>
-              <div className="group h-full">
-                <TouchOptimizedCard borderColor="border-emerald-500">
-                  <div className="relative w-full h-56 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
-                    <img 
-                      src="/products/variador.jpg" 
-                      alt="Variador" 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        if (e.currentTarget.parentElement) {
-                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
-                        }
-                      }}
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-xl font-bold text-text-primary">Variador</CardTitle>
-                    <CardDescription className="text-text-secondary mt-2">
-                      Variadores de frecuencia de alto rendimiento para control de velocidad de motores en sistemas de bombeo y producción. Convertidores especializados para petróleo y gas, eficiencia energética optimizada, reducción de costos operacionales y protección de equipos.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <Button className="w-full bg-emerald-600 text-white hover:bg-emerald-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
-                      Solicitar Cotización
-                    </Button>
-                  </CardContent>
-                </TouchOptimizedCard>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
       {/* Metrics Section */}
       <section id="nosotros">
         <MetricsSection />
@@ -632,27 +377,19 @@ export default function AllSuppliesWebsite() {
             {[
               {
                 title: "ISO 9001",
-                description: "Gestión de Calidad",
-                icon: "✓",
-                color: "border-blue-500 bg-blue-50"
+                description: "Gestion de Calidad"
               },
               {
                 title: "ISO 14001",
-                description: "Gestión Ambiental",
-                icon: "♻",
-                color: "border-green-500 bg-green-50"
+                description: "Gestion Ambiental"
               },
               {
                 title: "OHSAS 18001",
-                description: "Seguridad y Salud Ocupacional",
-                icon: "⚔",
-                color: "border-orange-500 bg-orange-50"
+                description: "Seguridad y Salud Ocupacional"
               },
               {
                 title: "ISO 27001",
-                description: "Seguridad de Información",
-                icon: "🔒",
-                color: "border-purple-500 bg-purple-50"
+                description: "Seguridad de Informacion"
               }
             ].map((cert, idx) => (
               <AnimatedSection
@@ -661,9 +398,8 @@ export default function AllSuppliesWebsite() {
                 delay={100 + idx * 50}
                 triggerOnce={false}
               >
-                <div className={`border-2 ${cert.color} rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300`}>
-                  <div className="text-4xl mb-3">{cert.icon}</div>
-                  <h3 className="font-bold text-xl text-text-primary mb-2">{cert.title}</h3>
+                <div className="border-2 border-brand-green bg-white rounded-lg p-8 text-center hover:shadow-lg hover:border-brand-green-dark transition-all duration-300">
+                  <h3 className="font-bold text-2xl text-brand-blue-dark mb-3">{cert.title}</h3>
                   <p className="text-text-secondary">{cert.description}</p>
                 </div>
               </AnimatedSection>
@@ -687,10 +423,10 @@ export default function AllSuppliesWebsite() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: "Siemens", category: "Automatización Industrial" },
-              { name: "Danfoss", category: "Sistemas de Control" },
-              { name: "ABB", category: "Equipos Eléctricos" },
-              { name: "Schneider Electric", category: "Energía y Automatización" }
+              { name: "Siemens", category: "Automatizacion Industrial", logo: "/allies/siemens.jpg" },
+              { name: "Danfoss", category: "Sistemas de Control", logo: "/allies/danfoss.jpg" },
+              { name: "ABB", category: "Equipos Electricos", logo: "/allies/abb.jpg" },
+              { name: "Schneider Electric", category: "Energia y Automatizacion", logo: "/allies/schneider.jpg" }
             ].map((ally, idx) => (
               <AnimatedSection
                 key={idx}
@@ -698,8 +434,21 @@ export default function AllSuppliesWebsite() {
                 delay={100 + idx * 75}
                 triggerOnce={false}
               >
-                <div className="bg-slate-50 border-2 border-slate-200 rounded-lg p-8 text-center hover:border-brand-green hover:shadow-lg hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl font-bold text-brand-blue-dark mb-2">{ally.name}</div>
+                <div className="bg-white border-2 border-slate-200 rounded-lg p-6 text-center hover:border-brand-green hover:shadow-lg hover:scale-105 transition-all duration-300">
+                  <div className="h-24 flex items-center justify-center mb-4">
+                    <img
+                      src={ally.logo}
+                      alt={ally.name}
+                      className="max-h-full max-w-full object-contain"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none"
+                        if (e.currentTarget.parentElement) {
+                          e.currentTarget.parentElement.innerHTML = `<span class="text-3xl font-bold text-brand-blue-dark">${ally.name}</span>`
+                        }
+                      }}
+                    />
+                  </div>
+                  <h3 className="font-bold text-lg text-brand-blue-dark mb-1">{ally.name}</h3>
                   <p className="text-text-secondary text-sm">{ally.category}</p>
                 </div>
               </AnimatedSection>
