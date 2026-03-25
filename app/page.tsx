@@ -262,7 +262,7 @@ export default function AllSuppliesWebsite() {
                   <CardHeader className="pb-3">
                     <CardTitle className="text-xl font-bold text-text-primary">Válvulas</CardTitle>
                     <CardDescription className="text-text-secondary mt-2">
-                      Sistemas de válvulas de control industrial de alta especificación, bombeo avanzado y componentes de alta presión para aplicaciones críticas.
+                      Sistemas de válvulas de control industrial de alta especificación para petróleo y gas. Disponibles en todo el mundo con distribución desde USA. Bombeo avanzado y componentes de alta presión para aplicaciones críticas de producción.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
@@ -294,7 +294,7 @@ export default function AllSuppliesWebsite() {
                   <CardHeader className="pb-3">
                     <CardTitle className="text-xl font-bold text-text-primary">Taladros</CardTitle>
                     <CardDescription className="text-text-secondary mt-2">
-                      Equipos de perforación profesionales y herramientas especializadas para operaciones de pozo, con tecnología de última generación.
+                      Equipos de perforación profesionales y herramientas especializadas para operaciones de pozos en petróleo y gas. Rigs de perforación con capacidades desde 700 HP hasta 3000 HP. Tecnología de última generación con suministro directo desde USA.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
@@ -326,7 +326,7 @@ export default function AllSuppliesWebsite() {
                   <CardHeader className="pb-3">
                     <CardTitle className="text-xl font-bold text-text-primary">Tornillería</CardTitle>
                     <CardDescription className="text-text-secondary mt-2">
-                      Componentes de fijación industrial certificados, tornillería de precisión y accesorios especializados para cualquier aplicación.
+                      Componentes de fijación industrial certificados ASTM para petróleo y gas. Tornillería de precisión, espárragos para altas temperaturas, barras roscadas y accesorios especializados. Disponible en stock y fabricación especial con múltiples grados de aleación.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
@@ -358,7 +358,7 @@ export default function AllSuppliesWebsite() {
                   <CardHeader className="pb-3">
                     <CardTitle className="text-xl font-bold text-text-primary">Herramientas</CardTitle>
                     <CardDescription className="text-text-secondary mt-2">
-                      Herramientas de precisión y equipo profesional para mantenimiento industrial, con durabilidad y rendimiento garantizado.
+                      Herramientas de precisión profesionales de marcas premium (DeWalt, Nikato, Black+Decker, Stanley) para mantenimiento y operaciones de equipos industriales. Herramientas eléctricas y manuales de durabilidad garantizada para ambientes exigentes de petróleo y gas.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
@@ -390,7 +390,7 @@ export default function AllSuppliesWebsite() {
                   <CardHeader className="pb-3">
                     <CardTitle className="text-xl font-bold text-text-primary">Revestidores</CardTitle>
                     <CardDescription className="text-text-secondary mt-2">
-                      Tuberías de revestimiento de alta resistencia para pozos profundos, con certificación internacional y máxima confiabilidad.
+                      Tuberías de revestimiento de acero de alta resistencia para pozos profundos en petróleo y gas. Disponibles múltiples dimensiones de diámetros externos (4 1/2" a 13 3/8") y espesores de pared. Tubería de producción y cabillas especializadas con certificación internacional.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
@@ -422,7 +422,7 @@ export default function AllSuppliesWebsite() {
                   <CardHeader className="pb-3">
                     <CardTitle className="text-xl font-bold text-text-primary">Sensor Wellcomm</CardTitle>
                     <CardDescription className="text-text-secondary mt-2">
-                      Sistema de monitoreo inteligente en tiempo real para pozos, con transmisión de datos inalámbrica y análisis avanzado.
+                      Sistema WellComm de monitoreo inteligente en tiempo real para pozos de petróleo y gas. Transmisión de datos inalámbrica remota, análisis avanzado de parámetros operacionales, sensores de presión y temperatura especializados para ambientes críticos.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
@@ -454,7 +454,7 @@ export default function AllSuppliesWebsite() {
                   <CardHeader className="pb-3">
                     <CardTitle className="text-xl font-bold text-text-primary">HMI DataLogger</CardTitle>
                     <CardDescription className="text-text-secondary mt-2">
-                      Interface de control humano con registro de datos automático, visualización de parámetros operacionales en tiempo real.
+                      Interface HMI con registro automático de datos (DataLogger) para sistemas de petróleo y gas. Visualización en tiempo real de parámetros operacionales, almacenamiento de datos históricos y control remoto de equipos industriales críticos.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
@@ -486,7 +486,7 @@ export default function AllSuppliesWebsite() {
                   <CardHeader className="pb-3">
                     <CardTitle className="text-xl font-bold text-text-primary">Variador</CardTitle>
                     <CardDescription className="text-text-secondary mt-2">
-                      Convertidores de frecuencia de alto rendimiento para control de velocidad de motores, eficiencia energética optimizada.
+                      Variadores de frecuencia de alto rendimiento para control de velocidad de motores en sistemas de bombeo y producción. Convertidores especializados para petróleo y gas, eficiencia energética optimizada, reducción de costos operacionales y protección de equipos.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
@@ -572,6 +572,17 @@ export default function AllSuppliesWebsite() {
                           <br />
                           Piso 19, Ciudad de Panamá - Panamá
                         </p>
+                        <a 
+                          href="https://maps.google.com/?q=Ave.+Aquilino+de+la+Guardia+y+Calle+47,+Ocean+Business+Plaza,+Panama+City"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block mt-3 text-brand-green-dark hover:text-brand-green font-semibold text-sm flex items-center space-x-1 hover:underline"
+                        >
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11z"/>
+                          </svg>
+                          <span>Ver en Google Maps</span>
+                        </a>
                       </div>
                       <div className="pt-4 border-t border-gray-200">
                         <h4 className="font-semibold text-text-primary mb-2 flex items-center space-x-2">
