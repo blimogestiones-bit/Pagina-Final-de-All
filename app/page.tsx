@@ -229,7 +229,7 @@ export default function AllSuppliesWebsite() {
       </section>
 
       {/* Products Section */}
-      <section id="productos" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden">
+      <section id="productos" className="py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
           <AnimatedSection animation="fade-up" delay={50}>
             <div className="text-center mb-16">
@@ -241,25 +241,35 @@ export default function AllSuppliesWebsite() {
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Válvulas */}
             <AnimatedSection animation="fade-up" delay={100} triggerOnce={false}>
               <div className="group h-full">
                 <TouchOptimizedCard borderColor="border-orange-500">
-                  <div className="relative w-full h-48 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
+                  <div className="relative w-full h-56 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
                     <img 
-                      src="/products/Valvulas.jpg" 
+                      src="/products/valvulas.jpg" 
                       alt="Válvulas" 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-orange-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>';
+                        if (e.currentTarget.parentElement) {
+                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-orange-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+                        }
                       }}
                     />
                   </div>
-                  <CardHeader className="text-center pb-3">
-                    <CardTitle className="text-lg font-bold text-text-primary">Válvulas</CardTitle>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-xl font-bold text-text-primary">Válvulas</CardTitle>
+                    <CardDescription className="text-text-secondary mt-2">
+                      Sistemas de válvulas de control industrial de alta especificación, bombeo avanzado y componentes de alta presión para aplicaciones críticas.
+                    </CardDescription>
                   </CardHeader>
+                  <CardContent className="pt-0">
+                    <Button className="w-full bg-orange-600 text-white hover:bg-orange-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
+                      Solicitar Cotización
+                    </Button>
+                  </CardContent>
                 </TouchOptimizedCard>
               </div>
             </AnimatedSection>
@@ -268,20 +278,30 @@ export default function AllSuppliesWebsite() {
             <AnimatedSection animation="fade-up" delay={150} triggerOnce={false}>
               <div className="group h-full">
                 <TouchOptimizedCard borderColor="border-red-500">
-                  <div className="relative w-full h-48 bg-gradient-to-br from-red-50 to-red-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
+                  <div className="relative w-full h-56 bg-gradient-to-br from-red-50 to-red-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
                     <img 
-                      src="/products/Taladros.jpg" 
+                      src="/products/taladros.jpg" 
                       alt="Taladros" 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-red-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54h4.93l-2.18-3.54z"/></svg>';
+                        if (e.currentTarget.parentElement) {
+                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+                        }
                       }}
                     />
                   </div>
-                  <CardHeader className="text-center pb-3">
-                    <CardTitle className="text-lg font-bold text-text-primary">Taladros</CardTitle>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-xl font-bold text-text-primary">Taladros</CardTitle>
+                    <CardDescription className="text-text-secondary mt-2">
+                      Equipos de perforación profesionales y herramientas especializadas para operaciones de pozo, con tecnología de última generación.
+                    </CardDescription>
                   </CardHeader>
+                  <CardContent className="pt-0">
+                    <Button className="w-full bg-red-600 text-white hover:bg-red-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
+                      Solicitar Cotización
+                    </Button>
+                  </CardContent>
                 </TouchOptimizedCard>
               </div>
             </AnimatedSection>
@@ -290,20 +310,30 @@ export default function AllSuppliesWebsite() {
             <AnimatedSection animation="fade-up" delay={200} triggerOnce={false}>
               <div className="group h-full">
                 <TouchOptimizedCard borderColor="border-yellow-500">
-                  <div className="relative w-full h-48 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
+                  <div className="relative w-full h-56 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
                     <img 
-                      src="/products/Tornilleria.jpg" 
+                      src="/products/tornilleria.jpg" 
                       alt="Tornillería" 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-yellow-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>';
+                        if (e.currentTarget.parentElement) {
+                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-yellow-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+                        }
                       }}
                     />
                   </div>
-                  <CardHeader className="text-center pb-3">
-                    <CardTitle className="text-lg font-bold text-text-primary">Tornillería</CardTitle>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-xl font-bold text-text-primary">Tornillería</CardTitle>
+                    <CardDescription className="text-text-secondary mt-2">
+                      Componentes de fijación industrial certificados, tornillería de precisión y accesorios especializados para cualquier aplicación.
+                    </CardDescription>
                   </CardHeader>
+                  <CardContent className="pt-0">
+                    <Button className="w-full bg-yellow-600 text-white hover:bg-yellow-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
+                      Solicitar Cotización
+                    </Button>
+                  </CardContent>
                 </TouchOptimizedCard>
               </div>
             </AnimatedSection>
@@ -312,20 +342,30 @@ export default function AllSuppliesWebsite() {
             <AnimatedSection animation="fade-up" delay={250} triggerOnce={false}>
               <div className="group h-full">
                 <TouchOptimizedCard borderColor="border-purple-500">
-                  <div className="relative w-full h-48 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
+                  <div className="relative w-full h-56 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
                     <img 
-                      src="/products/Herramientas.jpg" 
+                      src="/products/herramientas.jpg" 
                       alt="Herramientas" 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-purple-600" fill="currentColor" viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-1.41 1.4-3.05 1.4-4.9 0-5.51-4.49-10-10-10S1 -0.51 1 5 5.49 15 11 15c1.85 0 3.49-.5 4.9-1.4l9.1 9.1c.39.39 1.02.39 1.41 0l2.29-2.29c.39-.39.39-1.02 0-1.41zM5 9c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"/></svg>';
+                        if (e.currentTarget.parentElement) {
+                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+                        }
                       }}
                     />
                   </div>
-                  <CardHeader className="text-center pb-3">
-                    <CardTitle className="text-lg font-bold text-text-primary">Herramientas</CardTitle>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-xl font-bold text-text-primary">Herramientas</CardTitle>
+                    <CardDescription className="text-text-secondary mt-2">
+                      Herramientas de precisión y equipo profesional para mantenimiento industrial, con durabilidad y rendimiento garantizado.
+                    </CardDescription>
                   </CardHeader>
+                  <CardContent className="pt-0">
+                    <Button className="w-full bg-purple-600 text-white hover:bg-purple-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
+                      Solicitar Cotización
+                    </Button>
+                  </CardContent>
                 </TouchOptimizedCard>
               </div>
             </AnimatedSection>
@@ -334,20 +374,30 @@ export default function AllSuppliesWebsite() {
             <AnimatedSection animation="fade-up" delay={300} triggerOnce={false}>
               <div className="group h-full">
                 <TouchOptimizedCard borderColor="border-pink-500">
-                  <div className="relative w-full h-48 bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
+                  <div className="relative w-full h-56 bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
                     <img 
-                      src="/products/Revestidores.jpg" 
+                      src="/products/revestidores.jpg" 
                       alt="Revestidores" 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-pink-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>';
+                        if (e.currentTarget.parentElement) {
+                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-pink-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+                        }
                       }}
                     />
                   </div>
-                  <CardHeader className="text-center pb-3">
-                    <CardTitle className="text-lg font-bold text-text-primary">Revestidores</CardTitle>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-xl font-bold text-text-primary">Revestidores</CardTitle>
+                    <CardDescription className="text-text-secondary mt-2">
+                      Tuberías de revestimiento de alta resistencia para pozos profundos, con certificación internacional y máxima confiabilidad.
+                    </CardDescription>
                   </CardHeader>
+                  <CardContent className="pt-0">
+                    <Button className="w-full bg-pink-600 text-white hover:bg-pink-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
+                      Solicitar Cotización
+                    </Button>
+                  </CardContent>
                 </TouchOptimizedCard>
               </div>
             </AnimatedSection>
@@ -356,20 +406,30 @@ export default function AllSuppliesWebsite() {
             <AnimatedSection animation="fade-up" delay={350} triggerOnce={false}>
               <div className="group h-full">
                 <TouchOptimizedCard borderColor="border-cyan-500">
-                  <div className="relative w-full h-48 bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
+                  <div className="relative w-full h-56 bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
                     <img 
-                      src="/products/Sensor-wellcomm.jpg" 
+                      src="/products/sensor-wellcomm.jpg" 
                       alt="Sensor Wellcomm" 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-cyan-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>';
+                        if (e.currentTarget.parentElement) {
+                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-cyan-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+                        }
                       }}
                     />
                   </div>
-                  <CardHeader className="text-center pb-3">
-                    <CardTitle className="text-lg font-bold text-text-primary">Sensor Wellcomm</CardTitle>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-xl font-bold text-text-primary">Sensor Wellcomm</CardTitle>
+                    <CardDescription className="text-text-secondary mt-2">
+                      Sistema de monitoreo inteligente en tiempo real para pozos, con transmisión de datos inalámbrica y análisis avanzado.
+                    </CardDescription>
                   </CardHeader>
+                  <CardContent className="pt-0">
+                    <Button className="w-full bg-cyan-600 text-white hover:bg-cyan-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
+                      Solicitar Cotización
+                    </Button>
+                  </CardContent>
                 </TouchOptimizedCard>
               </div>
             </AnimatedSection>
@@ -378,20 +438,30 @@ export default function AllSuppliesWebsite() {
             <AnimatedSection animation="fade-up" delay={400} triggerOnce={false}>
               <div className="group h-full">
                 <TouchOptimizedCard borderColor="border-indigo-500">
-                  <div className="relative w-full h-48 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
+                  <div className="relative w-full h-56 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
                     <img 
-                      src="/products/Hmi-datalogger.jpg" 
+                      src="/products/hmi-datalogger.jpg" 
                       alt="HMI DataLogger" 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-indigo-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54h4.93l-2.18-3.54z"/></svg>';
+                        if (e.currentTarget.parentElement) {
+                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-indigo-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+                        }
                       }}
                     />
                   </div>
-                  <CardHeader className="text-center pb-3">
-                    <CardTitle className="text-lg font-bold text-text-primary">HMI DataLogger</CardTitle>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-xl font-bold text-text-primary">HMI DataLogger</CardTitle>
+                    <CardDescription className="text-text-secondary mt-2">
+                      Interface de control humano con registro de datos automático, visualización de parámetros operacionales en tiempo real.
+                    </CardDescription>
                   </CardHeader>
+                  <CardContent className="pt-0">
+                    <Button className="w-full bg-indigo-600 text-white hover:bg-indigo-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
+                      Solicitar Cotización
+                    </Button>
+                  </CardContent>
                 </TouchOptimizedCard>
               </div>
             </AnimatedSection>
@@ -400,20 +470,30 @@ export default function AllSuppliesWebsite() {
             <AnimatedSection animation="fade-up" delay={450} triggerOnce={false}>
               <div className="group h-full">
                 <TouchOptimizedCard borderColor="border-emerald-500">
-                  <div className="relative w-full h-48 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
+                  <div className="relative w-full h-56 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
                     <img 
-                      src="/products/Variador.jpg" 
+                      src="/products/variador.jpg" 
                       alt="Variador" 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>';
+                        if (e.currentTarget.parentElement) {
+                          e.currentTarget.parentElement.innerHTML = '<svg class="w-24 h-24 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>';
+                        }
                       }}
                     />
                   </div>
-                  <CardHeader className="text-center pb-3">
-                    <CardTitle className="text-lg font-bold text-text-primary">Variador</CardTitle>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-xl font-bold text-text-primary">Variador</CardTitle>
+                    <CardDescription className="text-text-secondary mt-2">
+                      Convertidores de frecuencia de alto rendimiento para control de velocidad de motores, eficiencia energética optimizada.
+                    </CardDescription>
                   </CardHeader>
+                  <CardContent className="pt-0">
+                    <Button className="w-full bg-emerald-600 text-white hover:bg-emerald-700 hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold">
+                      Solicitar Cotización
+                    </Button>
+                  </CardContent>
                 </TouchOptimizedCard>
               </div>
             </AnimatedSection>
