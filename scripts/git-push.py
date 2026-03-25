@@ -24,7 +24,7 @@ try:
     
     # Commit changes
     result = subprocess.run(
-        ['git', 'commit', '-m', 'Update: Enhanced product descriptions for oil & gas industry with Google Maps link and worldwide availability info'],
+        ['git', 'commit', '-m', 'Complete redesign: Enhanced hero, products carousel, full catalog, certifications, allies sections, and professional oil & gas styling'],
         capture_output=True,
         text=True
     )

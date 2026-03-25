@@ -3,6 +3,7 @@
 import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { AnimatedSection } from "@/components/animated-section"
 import { TouchOptimizedCard } from "@/components/touch-optimized-card"
+import { ProductCarousel } from "@/components/product-carousel"
 import { ContactForm } from "@/components/contact-form"
 import { MetricsSection } from "@/components/metrics-section"
 import { SmoothScrollNav } from "@/components/smooth-scroll-nav"
@@ -75,6 +76,66 @@ const ProcurementIcon = () => (
 )
 
 export default function AllSuppliesWebsite() {
+  // Datos de productos para el carrusel
+  const productsCarouselData = [
+    {
+      id: "valvulas",
+      name: "Válvulas",
+      description: "Control industrial de alta presión para petróleo y gas",
+      image: "/products/valvulas.jpg",
+      href: "/productos#valvulas",
+    },
+    {
+      id: "taladros",
+      name: "Taladros",
+      description: "Equipos de perforación 700HP-3000HP desde USA",
+      image: "/products/taladros.jpg",
+      href: "/productos#taladros",
+    },
+    {
+      id: "tornilleria",
+      name: "Tornillería",
+      description: "Componentes certificados ASTM para industria",
+      image: "/products/tornilleria.jpg",
+      href: "/productos#tornilleria",
+    },
+    {
+      id: "herramientas",
+      name: "Herramientas",
+      description: "Equipos profesionales de marcas premium",
+      image: "/products/herramientas.jpg",
+      href: "/productos#herramientas",
+    },
+    {
+      id: "revestidores",
+      name: "Revestidores",
+      description: "Tubería de acero para pozos profundos",
+      image: "/products/revestidores.jpg",
+      href: "/productos#revestidores",
+    },
+    {
+      id: "wellcomm",
+      name: "Sensor Wellcomm",
+      description: "Monitoreo inteligente en tiempo real",
+      image: "/products/sensor-wellcomm.jpg",
+      href: "/productos#wellcomm",
+    },
+    {
+      id: "hmi",
+      name: "HMI DataLogger",
+      description: "Interface con registro automático de datos",
+      image: "/products/hmi-datalogger.jpg",
+      href: "/productos#hmi",
+    },
+    {
+      id: "variador",
+      name: "Variador",
+      description: "Control de frecuencia para optimización",
+      image: "/products/variador.jpg",
+      href: "/productos#variador",
+    },
+  ]
+
   const servicesData = [
     {
       title: "Energía, tecnología y seguridad",
@@ -125,56 +186,104 @@ export default function AllSuppliesWebsite() {
       <SmoothScrollNav />
 
       {/* Hero Section con imagen de fondo */}
-      <section id="inicio" className="relative py-20 overflow-hidden min-h-[80vh] flex items-center">
-        {/* Imagen de fondo */}
+      <section id="inicio" className="relative py-20 overflow-hidden min-h-[90vh] flex items-center">
+        {/* Animated background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-dark via-blue-900 to-slate-900" />
+        
+        {/* Animated floating circles - Background decorative elements */}
+        <div className="absolute top-20 left-20 w-40 h-40 bg-brand-green/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-32 right-16 w-56 h-56 bg-brand-blue-light/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-brand-green/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+
+        {/* Imagen de fondo con overlay */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
             backgroundImage: "url('/hero-background.jpg')",
           }}
         />
 
-        {/* Overlay con gradiente para mejor legibilidad */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-dark/90 via-brand-blue-dark/80 to-brand-blue-dark/70" />
-
-        {/* Overlay adicional para móviles */}
-        <div className="absolute inset-0 bg-brand-blue-dark/20 md:bg-transparent" />
-
-        {/* Elementos decorativos sutiles */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white/5 rounded-full blur-xl"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-brand-green/10 rounded-full blur-xl"></div>
-        <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-white/3 rounded-full blur-lg"></div>
-
+        {/* Main content */}
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto space-y-6">
             <AnimatedSection animation="fade-up" delay={100}>
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+              <h2 className="text-5xl md:text-7xl font-bold text-white mb-4 drop-shadow-2xl leading-tight">
                 Soluciones Estratégicas Integrales
               </h2>
+              <div className="h-1 w-24 bg-gradient-to-r from-brand-green to-brand-blue mx-auto"></div>
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={200}>
-              <p className="text-xl text-white mb-8 leading-relaxed drop-shadow-md">
-                Empresa multinacional especializada en brindar soluciones estratégicas integrales a través de tres
-                divisiones clave:
-                <span className="font-semibold text-white"> Energía, tecnología y seguridad</span>,
-                <span className="font-semibold text-white"> Servicios de Procura</span> y
-                <span className="font-semibold text-white"> Gestión Financiera Internacional</span>.
+              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed drop-shadow-lg font-light">
+                Empresa multinacional especializada en soluciones para la industria de petróleo y gas a través de tres divisiones clave
               </p>
             </AnimatedSection>
 
             <AnimatedSection animation="scale-up" delay={300}>
-              <div className="bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-2xl max-w-3xl mx-auto border border-white/30">
-                <p className="text-lg text-white drop-shadow-sm">
-                  Nuestra propuesta de valor combina{" "}
-                  <span className="font-semibold text-brand-green-light">experiencia operativa</span>,{" "}
-                  <span className="font-semibold text-brand-green-light">innovación tecnológica</span> y una{" "}
-                  <span className="font-semibold text-brand-green-light">red global de aliados estratégicos</span> que
-                  nos permite operar con eficiencia.
-                </p>
+              <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10">
+                <div className="bg-white/10 backdrop-blur-md p-4 rounded-lg border border-brand-green/30 hover:border-brand-green/60 transition-all duration-300">
+                  <p className="text-white font-semibold">Energía, Tecnología</p>
+                  <p className="text-white/80 text-sm">y Seguridad</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md p-4 rounded-lg border border-brand-green/30 hover:border-brand-green/60 transition-all duration-300">
+                  <p className="text-white font-semibold">Procura</p>
+                  <p className="text-white/80 text-sm">Internacional</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md p-4 rounded-lg border border-brand-green/30 hover:border-brand-green/60 transition-all duration-300">
+                  <p className="text-white font-semibold">Gestión</p>
+                  <p className="text-white/80 text-sm">Financiera</p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection animation="fade-up" delay={400}>
+              <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <button
+                  onClick={() => scrollToSection("productos")}
+                  className="px-8 py-4 bg-gradient-to-r from-brand-green to-brand-green-dark text-white font-bold rounded-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg"
+                >
+                  Ver Productos
+                </button>
+                <button
+                  onClick={() => scrollToSection("contacto")}
+                  className="px-8 py-4 bg-white/20 backdrop-blur-md text-white font-bold rounded-lg border-2 border-white hover:bg-white/30 transform hover:scale-105 transition-all duration-300 text-lg"
+                >
+                  Contactar Ahora
+                </button>
               </div>
             </AnimatedSection>
           </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+          <svg className="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
+      </section>
+
+      {/* Products Carousel Section */}
+      <section id="productos" className="py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <AnimatedSection animation="fade-up" delay={50}>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Nuestros Productos</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-green to-brand-blue mx-auto"></div>
+              <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
+                Catálogo completo de soluciones especializadas para la industria de petróleo y gas
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <ProductCarousel
+            products={productsCarouselData}
+            itemsPerView={{
+              mobile: 1,
+              tablet: 2,
+              desktop: 4,
+            }}
+          />
         </div>
       </section>
 
@@ -504,6 +613,99 @@ export default function AllSuppliesWebsite() {
       {/* Metrics Section */}
       <section id="nosotros">
         <MetricsSection />
+      </section>
+
+      {/* Certifications Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <AnimatedSection animation="fade-up" delay={50}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Certificaciones Internacionales</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-green to-brand-blue mx-auto"></div>
+              <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
+                Cumplimiento riguroso de estándares internacionales de calidad, seguridad y sostenibilidad
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "ISO 9001",
+                description: "Gestión de Calidad",
+                icon: "✓",
+                color: "border-blue-500 bg-blue-50"
+              },
+              {
+                title: "ISO 14001",
+                description: "Gestión Ambiental",
+                icon: "♻",
+                color: "border-green-500 bg-green-50"
+              },
+              {
+                title: "OHSAS 18001",
+                description: "Seguridad y Salud Ocupacional",
+                icon: "⚔",
+                color: "border-orange-500 bg-orange-50"
+              },
+              {
+                title: "ISO 27001",
+                description: "Seguridad de Información",
+                icon: "🔒",
+                color: "border-purple-500 bg-purple-50"
+              }
+            ].map((cert, idx) => (
+              <AnimatedSection
+                key={idx}
+                animation="fade-up"
+                delay={100 + idx * 50}
+                triggerOnce={false}
+              >
+                <div className={`border-2 ${cert.color} rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300`}>
+                  <div className="text-4xl mb-3">{cert.icon}</div>
+                  <h3 className="font-bold text-xl text-text-primary mb-2">{cert.title}</h3>
+                  <p className="text-text-secondary">{cert.description}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Strategic Allies Section */}
+      <section className="py-20 bg-white overflow-hidden">
+        <div className="container mx-auto px-4">
+          <AnimatedSection animation="fade-up" delay={50}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Aliados Estratégicos</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-green to-brand-blue mx-auto"></div>
+              <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
+                Red de proveedores internacionales y socios comerciales en la industria
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { name: "Siemens", category: "Automatización Industrial" },
+              { name: "Danfoss", category: "Sistemas de Control" },
+              { name: "ABB", category: "Equipos Eléctricos" },
+              { name: "Schneider Electric", category: "Energía y Automatización" }
+            ].map((ally, idx) => (
+              <AnimatedSection
+                key={idx}
+                animation="scale-up"
+                delay={100 + idx * 75}
+                triggerOnce={false}
+              >
+                <div className="bg-slate-50 border-2 border-slate-200 rounded-lg p-8 text-center hover:border-brand-green hover:shadow-lg hover:scale-105 transition-all duration-300">
+                  <div className="text-4xl font-bold text-brand-blue-dark mb-2">{ally.name}</div>
+                  <p className="text-text-secondary text-sm">{ally.category}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Contact Section con Formulario */}
