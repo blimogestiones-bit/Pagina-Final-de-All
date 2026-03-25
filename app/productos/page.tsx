@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import { AnimatedSection } from "@/components/animated-section"
-import { SmoothScrollNav } from "@/components/smooth-scroll-nav"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const productsData = [
   {
@@ -18,7 +18,8 @@ const productsData = [
       "Disponible en stock permanente",
       "Distribucion global desde USA",
       "Certificacion API 6A y ISO 14313"
-    ]
+    ],
+    video: null,
   },
   {
     id: "taladros",
@@ -32,7 +33,8 @@ const productsData = [
       "Suministro desde USA",
       "Garantia internacional",
       "Soporte tecnico especializado"
-    ]
+    ],
+    video: null,
   },
   {
     id: "tornilleria",
@@ -46,7 +48,8 @@ const productsData = [
       "Fabricacion especial personalizada",
       "Stock permanente de items estandar",
       "Calibracion verificada y certificada"
-    ]
+    ],
+    video: null,
   },
   {
     id: "herramientas",
@@ -60,7 +63,8 @@ const productsData = [
       "Diseno ergonomico y robusto",
       "Garantia del fabricante incluida",
       "Disponible para venta y renta"
-    ]
+    ],
+    video: null,
   },
   {
     id: "revestidores",
@@ -74,7 +78,8 @@ const productsData = [
       "Cabillas en multiples tamanos",
       "Certificacion de resistencia verificada",
       "Disponible en acero carbon y aleaciones"
-    ]
+    ],
+    video: null,
   },
   {
     id: "wellcomm",
@@ -88,7 +93,8 @@ const productsData = [
       "Almacenamiento de datos historicos",
       "Panel de control remoto",
       "Alertas y notificaciones automaticas"
-    ]
+    ],
+    video: null,
   },
   {
     id: "hmi",
@@ -102,7 +108,8 @@ const productsData = [
       "Acceso remoto seguro",
       "Control de equipos integrado",
       "Reportes automaticos y analisis"
-    ]
+    ],
+    video: null,
   },
   {
     id: "variador",
@@ -116,7 +123,8 @@ const productsData = [
       "Reduccion de costos operacionales",
       "Diseno industrial robusto",
       "Compatible con multiples motores"
-    ]
+    ],
+    video: "/videos/variador.mp4",
   }
 ]
 
@@ -125,13 +133,50 @@ export default function ProductosPage() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <SmoothScrollNav />
+      {/* Navbar for catalog page - links back to home */}
+      <header className="bg-white text-brand-blue-dark py-4 sticky top-0 z-50 shadow-lg border-b border-gray-200">
+        <div className="container mx-auto px-4 flex items-center justify-between">
+          <div className="flex items-center">
+            <Link href="/">
+              <img
+                src="/logo-all-supplies-complete.png"
+                alt="All Supplies & Investment Inc"
+                className="h-16 w-auto object-contain md:h-20"
+              />
+            </Link>
+          </div>
+
+          <nav className="hidden md:flex items-center space-x-6">
+            <Link href="/#inicio" className="hover:text-brand-green-dark transition-colors font-medium px-3 py-2 rounded hover:bg-brand-green-50">
+              Inicio
+            </Link>
+            <Link href="/#servicios" className="hover:text-brand-green-dark transition-colors font-medium px-3 py-2 rounded hover:bg-brand-green-50">
+              Servicios
+            </Link>
+            <Link href="/#nosotros" className="hover:text-brand-green-dark transition-colors font-medium px-3 py-2 rounded hover:bg-brand-green-50">
+              Nosotros
+            </Link>
+            <Link href="/#contacto" className="hover:text-brand-green-dark transition-colors font-medium px-3 py-2 rounded hover:bg-brand-green-50">
+              Contacto
+            </Link>
+            <span className="font-bold text-brand-green border-b-2 border-brand-green px-3 py-2">
+              Productos
+            </span>
+          </nav>
+
+          <div className="md:hidden">
+            <Link href="/" className="text-brand-blue-dark hover:text-brand-green-dark font-medium text-sm px-3 py-2 border border-brand-blue-dark rounded">
+              Volver al Inicio
+            </Link>
+          </div>
+        </div>
+      </header>
 
       {/* Hero Section */}
-      <section className="relative py-16 overflow-hidden min-h-[40vh] flex items-center">
+      <section className="relative py-16 overflow-hidden min-h-[30vh] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-dark via-blue-900 to-slate-900" />
-        <div className="absolute top-20 left-20 w-40 h-40 bg-brand-green/15 rounded-full blur-3xl animate-pulse"></div>
-        
+        <div className="absolute top-10 left-20 w-32 h-32 bg-brand-green/15 rounded-full blur-3xl animate-pulse"></div>
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <AnimatedSection animation="fade-up" delay={100}>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-2xl">
@@ -148,22 +193,23 @@ export default function ProductosPage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8">
-            
+
             {/* Left Sidebar - Product List */}
             <div className="lg:w-1/4">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden sticky top-24">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden sticky top-28">
                 <div className="bg-brand-blue-dark text-white p-4">
-                  <h2 className="font-bold text-lg">Productos</h2>
+                  <h2 className="font-bold text-lg tracking-wide">Productos</h2>
                 </div>
-                <nav className="divide-y divide-slate-200">
+                <nav className="divide-y divide-slate-100">
                   {productsData.map((product) => (
                     <button
                       key={product.id}
+                      type="button"
                       onClick={() => setSelectedProduct(product)}
-                      className={`w-full text-left px-4 py-4 transition-all duration-200 ${
+                      className={`w-full text-left px-5 py-4 transition-all duration-200 font-medium text-sm ${
                         selectedProduct.id === product.id
-                          ? "bg-brand-green text-white font-semibold"
-                          : "bg-white text-text-primary hover:bg-brand-green/10 hover:text-brand-green"
+                          ? "bg-brand-green text-white"
+                          : "bg-white text-text-primary hover:bg-slate-50 hover:text-brand-green"
                       }`}
                     >
                       {product.name}
@@ -175,67 +221,88 @@ export default function ProductosPage() {
 
             {/* Right Panel - Product Detail */}
             <div className="lg:w-3/4">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+
                 {/* Product Image */}
-                <div className="relative h-80 md:h-96 bg-slate-100">
+                <div className="relative h-72 md:h-96 bg-slate-100">
                   <img
+                    key={selectedProduct.id}
                     src={selectedProduct.image}
                     alt={selectedProduct.name}
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       e.currentTarget.style.display = "none"
-                      if (e.currentTarget.parentElement) {
-                        e.currentTarget.parentElement.innerHTML =
-                          '<div class="flex items-center justify-center h-full bg-slate-200"><svg class="w-24 h-24 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>'
-                      }
                     }}
                   />
                 </div>
 
                 {/* Product Info */}
                 <div className="p-8">
+
                   {/* Title */}
-                  <h2 className="text-3xl font-bold text-brand-blue-dark mb-6">
+                  <h2 className="text-3xl font-bold text-brand-blue-dark mb-8">
                     {selectedProduct.name}
                   </h2>
 
-                  {/* Description Section */}
+                  {/* Description */}
                   <div className="mb-8">
-                    <h3 className="text-lg font-semibold text-brand-green mb-3 uppercase tracking-wide border-b border-brand-green pb-2">
+                    <h3 className="text-sm font-bold text-brand-green uppercase tracking-widest mb-3 pb-2 border-b border-brand-green/30">
                       Descripcion
                     </h3>
-                    <p className="text-text-secondary leading-relaxed text-lg">
+                    <p className="text-text-secondary leading-relaxed text-base">
                       {selectedProduct.description}
                     </p>
                   </div>
 
-                  {/* Features Section - Separated */}
+                  {/* Features - Clearly separated */}
                   <div className="mb-8">
-                    <h3 className="text-lg font-semibold text-brand-green mb-4 uppercase tracking-wide border-b border-brand-green pb-2">
+                    <h3 className="text-sm font-bold text-brand-green uppercase tracking-widest mb-4 pb-2 border-b border-brand-green/30">
                       Caracteristicas Tecnicas
                     </h3>
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-2 gap-3">
                       {selectedProduct.features.map((feature, idx) => (
-                        <div 
-                          key={idx} 
-                          className="flex items-center space-x-3 bg-slate-50 p-3 rounded-lg"
+                        <div
+                          key={idx}
+                          className="flex items-start space-x-3 p-3 bg-slate-50 rounded-lg"
                         >
-                          <div className="w-2 h-2 bg-brand-green rounded-full flex-shrink-0"></div>
-                          <span className="text-text-secondary">{feature}</span>
+                          <div className="w-1.5 h-1.5 bg-brand-green rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-text-secondary text-sm leading-relaxed">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  {/* CTA Button */}
+                  {/* Video section - only for variador */}
+                  {selectedProduct.video && (
+                    <div className="mb-8">
+                      <h3 className="text-sm font-bold text-brand-green uppercase tracking-widest mb-4 pb-2 border-b border-brand-green/30">
+                        Video Demostrativo
+                      </h3>
+                      <div className="bg-slate-900 rounded-xl overflow-hidden shadow-lg">
+                        <video
+                          controls
+                          className="w-full aspect-video"
+                          poster={selectedProduct.image}
+                        >
+                          <source src={selectedProduct.video} type="video/mp4" />
+                          Tu navegador no soporta la reproduccion de videos.
+                        </video>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* CTA */}
                   <div className="pt-6 border-t border-slate-200">
-                    <Button className="w-full md:w-auto px-8 py-4 bg-brand-green text-white hover:bg-brand-green-dark hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold text-lg">
-                      Solicitar Cotizacion
-                    </Button>
+                    <Link href="/#contacto">
+                      <Button className="px-8 py-4 bg-brand-green text-white hover:bg-brand-green-dark hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-0 font-semibold text-base">
+                        Solicitar Cotizacion
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>

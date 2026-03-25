@@ -270,41 +270,6 @@ export default function AllSuppliesWebsite() {
         </div>
       </section>
 
-      {/* Variadores de Frecuencia Video Section */}
-      <section className="py-20 bg-white overflow-hidden">
-        <div className="container mx-auto px-4">
-          <AnimatedSection animation="fade-up" delay={50}>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">Variadores de Frecuencia en Accion</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-brand-green to-brand-blue mx-auto"></div>
-              <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
-                Conoce nuestros variadores de frecuencia de alto rendimiento para control de velocidad en sistemas industriales
-              </p>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection animation="scale-up" delay={150}>
-            <div className="max-w-4xl mx-auto">
-              <div className="relative bg-slate-900 rounded-xl overflow-hidden shadow-2xl">
-                <video
-                  controls
-                  className="w-full aspect-video"
-                  poster="/products/variador.jpg"
-                >
-                  <source src="/videos/variador.mp4" type="video/mp4" />
-                  Tu navegador no soporta la reproduccion de videos.
-                </video>
-              </div>
-              <div className="mt-6 text-center">
-                <p className="text-text-secondary">
-                  Eficiencia energetica optimizada, reduccion de costos operacionales y proteccion de equipos integrada.
-                </p>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* Services Section */}
       <section id="servicios" className="py-20 bg-slate-50 overflow-hidden">
         <div className="container mx-auto px-4">
